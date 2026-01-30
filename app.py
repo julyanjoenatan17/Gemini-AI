@@ -7,15 +7,15 @@ st.set_page_config(page_title="Banana DNA: Ultimate", page_icon="🍌", layout="
 # --- DATABASE DNA (LOCKED) ---
 # Data fisik: 171cm, 57kg, Lean Physique
 MY_FACE_DNA = (
-    "a young Southeast Asian man with a lean slender physique (171cm height, 57kg weight). "
-    "He has a distinct oval face, sharp pointed chin, defined jawline, and a medium-width nose with a rounded tip. "
-    "His hair is thick, black, and voluminous, styled with a messy textured fringe covering the forehead "
-    "and neatly tapered low-fade sides. He has dark almond-shaped eyes, natural eyebrows, and thin lips with a subtle smirk."
+    "a natural young Southeast Asian man with a lean slender physique (171cm height, 57kg weight). "
+    "He has a distinct slightly oval face, slightly sharp pointed chin, natural defined jawline, and a natural medium-width nose with a rounded tip. "
+    "His hair is natural thick, straight, black, and slightly voluminous, styled with a slightly to the upper right, slightly textured fringe covering the forehead "
+    "and neatly tapered low-fade sides but not to slightly. He has dark almond-shaped eyes, natural eyebrows, and thin lips with a subtle smirk."
 )
 
 MY_ACCESSORIES_FIXED = (
-    "He is accessorized with a small silver cross necklace and a detailed CASIO AE-1300WH digital watch "
-    "with a metallic red bezel and a black resin strap on his left wrist."
+    "He is accessorized with a small silver plain cross necklace and a detailed CASIO AE-1300WH digital watch "
+    "with a square metallic red bezel and a black resin strap on his left wrist."
 )
 
 # --- FUNGSI TRANSLATE ---
@@ -151,9 +151,9 @@ def build_prompt(action_en, angle, shot, top_i_en, top_c_en, top_f, bot_i_en, bo
         outfit_full += f", {shoes_en}"
 
     # D. TEKNIS & RASIO
-    if "0.5x" in lens: tech = "Shot on iPhone 17 Pro Max, 0.5x ultra-wide lens, dynamic perspective."
-    elif "Cinematic" in lens: tech = "Cinematic bokeh, f/1.8 aperture, soft blur."
-    else: tech = "High-fidelity 24MP, sharp focus."
+    if "0.5x" in lens: tech = "Shot on natural iPhone 17 Pro Max, natural 0.5x ultra-wide lens, natural dynamic perspective."
+    elif "Cinematic" in lens: tech = "Natural Cinematic bokeh, f/1.8 aperture, soft blur."
+    else: tech = "Natural High-fidelity 24MP, natural sharp focus."
 
     if "9:16" in ratio: r_kw = "vertical 9:16 aspect ratio"
     elif "3:4" in ratio: r_kw = "vertical 3:4 aspect ratio"
@@ -162,12 +162,12 @@ def build_prompt(action_en, angle, shot, top_i_en, top_c_en, top_f, bot_i_en, bo
 
     # E. RAKIT FINAL
     return (
-        f"A high-fidelity realistic {angle_kw}, {shot_kw} of {MY_FACE_DNA}. "
+        f"A high-fidelity natural realistic {angle_kw}, {shot_kw} of {MY_FACE_DNA}. "
         f"{action_en}. "
         f"He is {outfit_full}. "
         f"{MY_ACCESSORIES_FIXED} "
         f"{tech} "
-        f"Cinematic lighting, natural skin texture, {r_kw}, aesthetic smartphone photography style."
+        f"Natural Cinematic lighting, natural skin texture, {r_kw}, aesthetic smartphone photography style."
     )
 
 # --- EKSEKUSI ---
